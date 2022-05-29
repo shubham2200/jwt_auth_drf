@@ -84,6 +84,7 @@ class SearchProductListAPIView(generics.ListAPIView):
     serializer_class = ProductSeri
     filter_backends = [filters.SearchFilter]
     pagination_class = StandardResultsSetPagination
-
     search_fields = ['product_name','id']
+    ordering = ['product_name']
+
 
